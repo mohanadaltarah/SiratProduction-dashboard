@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+
+@theme static {
+    --font-sans: 'Public Sans', sans-serif;
+
+    --breakpoint-3xl: 1920px;
+
+    --color-vermilion-50: #fff6ec;
+    --color-vermilion-100: #ffead3;
+    --color-vermilion-200: #ffd0a5;
+    --color-vermilion-300: #ffaf6d;
+    --color-vermilion-400: #ff8132;
+    --color-vermilion-500: #ff5e0a;
+    --color-vermilion-600: #ff4400;
+    --color-vermilion-700: #cc2e02;
+    --color-vermilion-800: #a1250b;
+    --color-vermilion-900: #82210c;
+    --color-vermilion-950: #460d04;
+
+}

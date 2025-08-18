@@ -6,23 +6,30 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
+    '@nuxt/ui',
     '@nuxt/eslint',
     '@nuxt/image',
     '@nuxt/scripts',
     '@nuxt/test-utils',
-    '@nuxt/ui',
-    '@compodium/nuxt'
+    '@compodium/nuxt',
   ],
 
-  vite: {
-    resolve: {
-      alias: {
-        '~': fileURLToPath(new URL('./', import.meta.url)),
-        '@': fileURLToPath(new URL('./', import.meta.url)),
-      }
-    }
-  },
+  // vite: {
+  //   resolve: {
+  //     alias: {
+  //       '~': fileURLToPath(new URL('./app', import.meta.url)),
+  //       '@': fileURLToPath(new URL('./app', import.meta.url)),
+  //     }
+  //   }
+  // },
 
-  css: ['~/assets/css/main.css']
+  css: ['~/assets/css/main.css'],
+
+  runtimeConfig: {
+    // Keys within public are also exposed client-side
+    public: {
+      apiBase: '/api'
+    }
+  }
 
 })

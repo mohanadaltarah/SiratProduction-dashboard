@@ -14,14 +14,18 @@ export default defineNuxtConfig({
     '@compodium/nuxt',
   ],
 
-  // vite: {
-  //   resolve: {
-  //     alias: {
-  //       '~': fileURLToPath(new URL('./app', import.meta.url)),
-  //       '@': fileURLToPath(new URL('./app', import.meta.url)),
-  //     }
-  //   }
-  // },
+  ui: {
+    theme: {
+      colors: [
+        'primary',
+        'secondary',
+        'info',
+        'success',
+        'warning',
+        'error'
+      ]
+    }
+  },
 
   css: ['~/assets/css/main.css'],
 
@@ -30,6 +34,7 @@ export default defineNuxtConfig({
     public: {
       apiBase: '/api'
     }
-  }
+  },
+
 
 })

@@ -10,5 +10,12 @@ export default <Config>{
         './nuxt.config.{js,ts}',
         './app.vue'
     ],
-    plugins: []
+    plugins: [],
+    theme: {
+        extend: {
+            fontFamily: {
+                mirza: ['mirza', 'sans-serif'],
+            }
+        }
+    }
 }

@@ -1,9 +1,9 @@
 @import "tailwindcss";
-@import "@nuxt/ui";
+@import "@nuxt/ui-pro";
 
 
 @theme static {
-    --font-sans: 'Public Sans', sans-serif;
+    --font-sans: 'mirza', sans-serif;
 
     --breakpoint-3xl: 1920px;
 
@@ -68,3 +68,4 @@
 .dark {
     --ui-primary: var(--ui-color-vermilion-200);
 }
+

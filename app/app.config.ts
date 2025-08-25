@@ -6,8 +6,13 @@ export default defineAppConfig({
     },
     navigationMenu: {
       slots: {
-        list: "flex justify-center gap-6",
+        list: "flex flex-col gap-6",
         link: "text-lg",
+      },
+    },
+    dashboardPanel: {
+      slots: {
+        root: "drop-shadow drop-shadow-neutral-200",
       },
     },
   },

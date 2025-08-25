@@ -1,11 +1,13 @@
 <template>
   <div>
     <UApp>
-        <NuxtPage/>
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
     </UApp>
   </div>
 </template>
 <script setup lang="ts">
-const appConfig = useAppConfig()
-const runtimeConfig = useRuntimeConfig()
+const appConfig = useAppConfig();
+const runtimeConfig = useRuntimeConfig();
 </script>

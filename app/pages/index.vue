@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref, shallowRef } from "vue";
 import { sub } from "date-fns";
-import type { DropdownMenuItem } from "@nuxt/ui";
 import type { Period, Range } from "~/types";
 
 definePageMeta({ layout: "default" });
@@ -15,8 +14,9 @@ const period = ref<Period>("daily");
 
 <template>
   <div>
-    <section>
+    <section class="px-10 flex flex-col gap-10">
       <HomeStats :period="period" :range="range" />
+      <HomeChart :period="period" :range="range" />
       <UDashboardPanel> </UDashboardPanel>
     </section>
   </div>

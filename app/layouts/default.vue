@@ -3,7 +3,7 @@ import Header from "~/layouts/Header.vue";
 </script>
 
 <template>
-  <div class="flex flex-col">
+  <div class="flex flex-col h-screen overflow-hidden">
     <!-- Header -->
     <Header />
     <div class="w-full flex justify-between">

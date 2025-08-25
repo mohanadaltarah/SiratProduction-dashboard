@@ -22,9 +22,14 @@ const items = ref<NavigationMenuItem[][]>([
       to: "/posts",
     },
     {
-      label: "Analytics",
-      icon: "lets-icons:stat",
-      to: "/analytics",
+      label: "Courses",
+      icon: "lets-icons:book-open-alt",
+      to: "/courses",
+    },
+    {
+      label: "Users",
+      icon: "lets-icons:user-alt-fill",
+      to: "/users",
     },
   ],
   [
@@ -44,11 +49,11 @@ const items = ref<NavigationMenuItem[][]>([
 </script>
 
 <template>
-  <section class="px-20">
+  <section class="px-16">
     <div
-      class="h-screen bg-secondary-50 drop-shadow drop-shadow-neutral-200 flex justify-center items-start rounded-xl py-5"
+      class="bg-secondary-50 drop-shadow drop-shadow-neutral-200 flex justify-center items-start rounded-xl py-5"
     >
-      <div class="flex flex-col justify-between h-full">
+      <div class="flex flex-col justify-between">
         <!-- Top Menu -->
         <UNavigationMenu
           highlight
@@ -56,7 +61,15 @@ const items = ref<NavigationMenuItem[][]>([
           orientation="vertical"
           collapsed
           :items="items[0]"
-        />
+        >
+          <!-- Override how icons are rendered -->
+          <template #item="{ item }">
+            <div class="flex items-center gap-3">
+              <!-- Bigger Icon -->
+              <UIcon :name="item.icon" class="w-7 h-7" />
+            </div>
+          </template>
+        </UNavigationMenu>
 
         <!-- Divider -->
         <hr class="border-t border-gray-300 my-4" />
@@ -68,7 +81,14 @@ const items = ref<NavigationMenuItem[][]>([
           orientation="vertical"
           collapsed
           :items="items[1]"
-        />
+        >
+          <template #item="{ item }">
+            <div class="flex items-center gap-3">
+              <!-- Bigger Icon -->
+              <UIcon :name="item.icon" class="w-7 h-7" />
+            </div>
+          </template>
+        </UNavigationMenu>
       </div>
     </div>
   </section>
